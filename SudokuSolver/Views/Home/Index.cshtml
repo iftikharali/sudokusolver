@@ -1,0 +1,153 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+	.outer-border {
+		border: 2px solid black;
+	}
+	.border-right {
+		border-right: 2px solid black;
+	}
+	.bottom-border {
+		border-bottom: 2px solid black;
+	}
+	td {
+		width: 3em;
+		height: 3em;
+		border: 1px solid;
+		text-align: center;
+	}
+</style>
+<div class="container">
+	
+	<div class="outer-box">
+		<table contenteditable="true" class="outer-border">
+			<tbody>
+				<tr>
+					<td>5</td>
+					<td>3</td>
+					<td class="border-right"></td>
+					<td></td>
+					<td>7</td>
+					<td class="border-right"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td></td>
+					<td class="border-right"></td>
+					<td>1</td>
+					<td>9</td>
+					<td class="border-right">5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr class="bottom-border">
+					<td></td>
+					<td>9</td>
+					<td class="border-right">8</td>
+					<td></td>
+					<td></td>
+					<td class="border-right"></td>
+					<td></td>
+					<td>6</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td></td>
+					<td class="border-right"></td>
+					<td></td>
+					<td>6</td>
+					<td class="border-right"></td>
+					<td></td>
+					<td></td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td></td>
+					<td class="border-right"></td>
+					<td>8</td>
+					<td></td>
+					<td class="border-right">3</td>
+					<td></td>
+					<td></td>
+					<td>1</td>
+				</tr>
+				<tr class="bottom-border">
+					<td>7</td>
+					<td></td>
+					<td class="border-right"></td>
+					<td></td>
+					<td>2</td>
+					<td class="border-right"></td>
+					<td></td>
+					<td></td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>6</td>
+					<td class="border-right"></td>
+					<td></td>
+					<td></td>
+					<td class="border-right"></td>
+					<td>2</td>
+					<td>8</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class="border-right"></td>
+					<td>4</td>
+					<td>1</td>
+					<td class="border-right">9</td>
+					<td></td>
+					<td></td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class="border-right"></td>
+					<td></td>
+					<td>8</td>
+					<td class="border-right"></td>
+					<td></td>
+					<td>7</td>
+					<td>9</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+@section Scripts{
+<script>
+	var outerArray = new Array();
+	function startReading() {
+		$("tr").each(function (ind, x) {
+			var array = new Array();
+			$(this).find("td").each(function (ss, uu) {
+				array.push(uu.innerText);
+			});
+			outerArray.push(array);
+		});
+
+		$.ajax({
+			url: '/Home/SolveSudoku',
+			data: { sudokuData: outerArray },
+			type: 'POST',
+			success: function (response) {
+				console.log(response);
+			}
+		});
+	}
+	
+		startReading();
+</script>
+}
