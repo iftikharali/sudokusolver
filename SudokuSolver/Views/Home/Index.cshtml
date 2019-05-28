@@ -22,7 +22,7 @@
 	
 	<div class="outer-box">
 		<table contenteditable="true" class="outer-border">
-			<tbody>
+			<tbody id="tablebody">
 				<tr>
 					<td>5</td>
 					<td>3</td>
@@ -125,11 +125,17 @@
 			</tbody>
 		</table>
 	</div>
+    <div class="row">
+        <div class="col-lg-12">
+            <button id="solveSudoku" class="btn btn-success" type="button">Solve Sudoku</button>
+        </div>
+    </div>
 </div>
 @section Scripts{
 <script>
-	var outerArray = new Array();
-	function startReading() {
+	
+    function startReading() {
+        var outerArray = new Array();
 		$("tr").each(function (ind, x) {
 			var array = new Array();
 			$(this).find("td").each(function (ss, uu) {
@@ -143,11 +149,30 @@
 			data: { sudokuData: outerArray },
 			type: 'POST',
 			success: function (response) {
-				console.log(response);
+                console.log(response);
+                $tableBody = "";
+                for ($row = 0; $row < 9; $row++) {
+                    if ($row == 2 || $row == 5) {
+                        $tableBody += "<tr class='bottom-border'>";
+                    } else {
+                        $tableBody += "<tr>";
+                    }
+                    for ($col = 0; $col < 9; $col++) {
+                        if ($col == 2 || $col == 5) {
+                            $tableBody += "<td class='border-right'>" + response[$row][$col] + "</td>";
+                        } else {
+                            $tableBody += "<td>"+response[$row][$col]+"</td>";
+                        }
+                    }
+                    $tableBody += "</tr>";
+                }
+                $("#tablebody").empty().append($tableBody);
 			}
 		});
 	}
-	
-		startReading();
+    $("#solveSudoku").click(function () {
+        startReading();
+    });
+		
 </script>
 }
