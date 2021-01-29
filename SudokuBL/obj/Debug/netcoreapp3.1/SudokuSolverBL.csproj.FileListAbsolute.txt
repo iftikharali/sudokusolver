@@ -1,0 +1,8 @@
+C:\CD\sudokusolver\SudokuBL\bin\Debug\netcoreapp3.1\SudokuSolverBL.deps.json
+C:\CD\sudokusolver\SudokuBL\bin\Debug\netcoreapp3.1\SudokuSolverBL.dll
+C:\CD\sudokusolver\SudokuBL\bin\Debug\netcoreapp3.1\SudokuSolverBL.pdb
+C:\CD\sudokusolver\SudokuBL\obj\Debug\netcoreapp3.1\SudokuSolverBL.csproj.CoreCompileInputs.cache
+C:\CD\sudokusolver\SudokuBL\obj\Debug\netcoreapp3.1\SudokuSolverBL.AssemblyInfoInputs.cache
+C:\CD\sudokusolver\SudokuBL\obj\Debug\netcoreapp3.1\SudokuSolverBL.AssemblyInfo.cs
+C:\CD\sudokusolver\SudokuBL\obj\Debug\netcoreapp3.1\SudokuSolverBL.dll
+C:\CD\sudokusolver\SudokuBL\obj\Debug\netcoreapp3.1\SudokuSolverBL.pdb

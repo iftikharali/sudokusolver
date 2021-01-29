@@ -1,0 +1,9 @@
+C:\CD\sudokusolver\SudokuSolverBL\bin\Debug\SudokuSolverBL.dll
+C:\CD\sudokusolver\SudokuSolverBL\bin\Debug\SudokuSolverBL.pdb
+C:\CD\sudokusolver\SudokuSolverBL\bin\Debug\SudokuSolverDAL.dll
+C:\CD\sudokusolver\SudokuSolverBL\bin\Debug\SudokuSolverDAL.pdb
+C:\CD\sudokusolver\SudokuSolverBL\obj\Debug\SudokuSolverBL.csprojAssemblyReference.cache
+C:\CD\sudokusolver\SudokuSolverBL\obj\Debug\SudokuSolverBL.csproj.CoreCompileInputs.cache
+C:\CD\sudokusolver\SudokuSolverBL\obj\Debug\SudokuSolverBL.csproj.CopyComplete
+C:\CD\sudokusolver\SudokuSolverBL\obj\Debug\SudokuSolverBL.dll
+C:\CD\sudokusolver\SudokuSolverBL\obj\Debug\SudokuSolverBL.pdb

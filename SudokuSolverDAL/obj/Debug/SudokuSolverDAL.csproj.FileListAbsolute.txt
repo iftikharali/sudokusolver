@@ -1,0 +1,6 @@
+C:\CD\sudokusolver\SudokuSolverDAL\bin\Debug\SudokuSolverDAL.dll
+C:\CD\sudokusolver\SudokuSolverDAL\bin\Debug\SudokuSolverDAL.pdb
+C:\CD\sudokusolver\SudokuSolverDAL\obj\Debug\SudokuSolverDAL.csprojAssemblyReference.cache
+C:\CD\sudokusolver\SudokuSolverDAL\obj\Debug\SudokuSolverDAL.csproj.CoreCompileInputs.cache
+C:\CD\sudokusolver\SudokuSolverDAL\obj\Debug\SudokuSolverDAL.dll
+C:\CD\sudokusolver\SudokuSolverDAL\obj\Debug\SudokuSolverDAL.pdb

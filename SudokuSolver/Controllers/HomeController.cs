@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SudokuSolverBL;
 
 namespace SudokuSolver.Controllers
 {
@@ -29,6 +30,9 @@ namespace SudokuSolver.Controllers
         }
         public JsonResult SolveSudoku(string[][] sudokuData)
         {
+            SudokuSolverBL.SudokuSolver sudokuSolver = new SudokuSolverBL.SudokuSolver(sudokuData);
+            int[][] solvedSudokuData =  sudokuSolver.Solve();
+            /*
             var leftToRight = sudokuData.First();
             var topToBottom = getTopToBottomNumber(sudokuData,0);
             bool notCompleted = true;
@@ -79,8 +83,8 @@ namespace SudokuSolver.Controllers
                 }
             } while (notCompleted);
 
-            
-            return Json(sudokuData);
+            */
+            return Json(solvedSudokuData);
         }
 
         public string[] getCenterData(string[][] sudokuData,int topIndex, int bottomIndex)
